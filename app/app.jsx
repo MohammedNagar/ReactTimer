@@ -5,7 +5,7 @@ var Main  = require('Main');
 
 //Load foundation
 
-require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+
 $(document).foundation();
 
 //app style

@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports= {
   entry:[ 'babel-polyfill',
@@ -41,7 +42,20 @@ module.exports= {
       },
       test:/\.jsx?$/,
       exclude:/(node_modules|bower_components)/
-    }]
-  },
+    },
+
+    {
+            test: /\.scss$/,
+            use: [
+                {
+                loader: "sass-loader",
+                options: {
+                    includePaths: ["./node_modules/foundation-sites/scss"]
+                }
+            }]
+        }
+      ]
+    },
+
   devtool: 'cheap-module-eval-source-map'
 };
